@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "cf-worker-api",
+  "name": "api-oplist_web",
   "main": "src/index.ts",
   "compatibility_date": "2025-05-25",
   "compatibility_flags": [
