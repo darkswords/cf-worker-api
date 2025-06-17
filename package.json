@@ -1,5 +1,5 @@
 {
-  "name": "cf-worker-api",
+  "name": "api-oplist_web",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
