@@ -11,12 +11,10 @@ async function getLogin(refresh = false) {
     let check_flag = true;
     // 验证秘钥情况 ==================================================
     if (!server_use) {
-        if (apps_type !== "alicloud_oa" &&
-            apps_type !== "baidunuy_go" &&
-            apps_type !== "baiduyun_ob")
+        if (apps_type !== "alicloud_oa" && apps_subs !== "baiduyun")
             if (apps_uuid === "" || apps_keys === "")
                 check_flag = false
-        if (apps_subs === "baidunuy")
+        if (apps_subs === "baiduyun")
             if (secret_key === "" || apps_keys === "")
                 check_flag = false
         if (!check_flag) {
