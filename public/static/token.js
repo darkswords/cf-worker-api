@@ -83,6 +83,7 @@ async function getToken() {
                 document.getElementById("callback-url").value = "oob";
             }
         } else {
+            document.getElementById('secret-key-view').hidden = true;
             document.getElementById('client-id-view').hidden = false;
             document.getElementById("app-secret").value = "";
             document.getElementById("secret-key").value = "";
@@ -94,8 +95,8 @@ async function getToken() {
             siteSelect.value == "onedrive_cn" ||
             siteSelect.value == "onedrive_us" ||
             siteSelect.value == "onedrive_de" ||
-            siteSelect.value == "alicloud_oa" ||
-            siteSelect.value == "alicloud_qr"
+            siteSelect.value == "alicloud_oa"
+            // siteSelect.value == "alicloud_qr"
         ) {
             document.getElementById("server_use").checked = false;
             document.getElementById("server_use").disabled = true;
@@ -107,8 +108,9 @@ async function getToken() {
         const appSecretInput = document.getElementById('app-secret');
         const secretKeyInput = document.getElementById('secret-key');
         const server_flag = document.getElementById('server_use');
-        if ((siteSelect.value === "alicloud_qr"
-            || siteSelect.value === "alicloud_oa"
+        if ((
+            // siteSelect.value === "alicloud_qr"
+               siteSelect.value === "alicloud_oa"
             || siteSelect.value === "123cloud_go"
             || siteSelect.value === "onedrive_cn"
             || siteSelect.value === "onedrive_us"
@@ -119,7 +121,7 @@ async function getToken() {
                 position: 'top',
                 icon: 'error',
                 title: '暂不支持',
-                html: "阿里云、123云盘、OneDrive非美国区域暂不支持使用官方密钥",
+                html: "123云盘、OneDrive非美国区域暂不支持使用官方密钥",
                 showConfirmButton: true,
             });
             return;
