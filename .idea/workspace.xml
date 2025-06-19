@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="987ac7e2-ceaa-49a2-b5c9-aed65a7c598d" name="更改" comment="add server app">
+    <list default="true" id="987ac7e2-ceaa-49a2-b5c9-aed65a7c598d" name="更改" comment="mod driver_txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/tests.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/115ui.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/115ui.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/123ui.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/123ui.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aliui.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/aliui.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baidu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/baidu.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/goapi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/goapi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/oneui.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/oneui.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrangler.jsonc.example" beforeDir="false" afterPath="$PROJECT_DIR$/wrangler.jsonc.example" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "xiaoman1221"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;xiaoman1221&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:xiaoman1221/cf-worker-api.git",
-    "accountId": "dc84280e-17eb-471f-bdb9-c542ed6bcde0"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:xiaoman1221/cf-worker-api.git&quot;,
+    &quot;accountId&quot;: &quot;dc84280e-17eb-471f-bdb9-c542ed6bcde0&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -49,27 +49,30 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2yODHqSaoKJtcQuARzcBv8XxHZq" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "G:/AList/cf-worker-api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.language.and.region",
-    "ts.external.directory.path": "/Users/xiaoman1221/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/AList/cf-worker-api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.and.region&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\pikachuren\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\AList\cf-worker-api" />
@@ -98,6 +101,7 @@
       <workItem from="1749696773818" duration="18000" />
       <workItem from="1749696801474" duration="20247000" />
       <workItem from="1749729820615" duration="1140000" />
+      <workItem from="1750212996387" duration="18410000" />
     </task>
     <task id="LOCAL-00001" summary="fin onedrive official token">
       <option name="closed" value="true" />
@@ -179,7 +183,71 @@
       <option name="project" value="LOCAL" />
       <updated>1749817071777</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="mod README.md">
+      <option name="closed" value="true" />
+      <created>1750051052789</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750051052789</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix google drive cookie issue&#10;add aliyun2 refresh&#10;add yandex refresh&#10;add baiduyun oob mode">
+      <option name="closed" value="true" />
+      <created>1750065981857</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750065981857</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix google drive cookie issue&#10;add aliyun2 refresh&#10;add yandex refresh&#10;add baiduyun oob mode">
+      <option name="closed" value="true" />
+      <created>1750067646944</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750067646944</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix google drive cookie issue&#10;add aliyun2 refresh&#10;add yandex refresh&#10;add baiduyun oob mode">
+      <option name="closed" value="true" />
+      <created>1750067817801</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750067817801</updated>
+    </task>
+    <task id="LOCAL-00015" summary="mod readme.md&#10;mod wrangler.jsonc.example">
+      <option name="closed" value="true" />
+      <created>1750126920302</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750126920302</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix baiduyun costumer client id error">
+      <option name="closed" value="true" />
+      <created>1750215148654</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750215148654</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add aliyun open">
+      <option name="closed" value="true" />
+      <created>1750324492353</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1750324492353</updated>
+    </task>
+    <task id="LOCAL-00018" summary="mod driver_txt">
+      <option name="closed" value="true" />
+      <created>1750335161602</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1750335161602</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +262,30 @@
     <MESSAGE value="deal 115 baidu cloud" />
     <MESSAGE value="deal google &amp; 123 pan" />
     <MESSAGE value="add server app" />
-    <option name="LAST_COMMIT_MESSAGE" value="add server app" />
+    <MESSAGE value="mod README.md" />
+    <MESSAGE value="fix google drive cookie issue&#10;add aliyun2 refresh&#10;add yandex refresh&#10;add baiduyun oob mode" />
+    <MESSAGE value="mod readme.md&#10;mod wrangler.jsonc.example" />
+    <MESSAGE value="fix baiduyun costumer client id error" />
+    <MESSAGE value="add aliyun open" />
+    <MESSAGE value="mod driver_txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="mod driver_txt" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/static/token.js</url>
+          <line>112</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/static/login.js</url>
+          <line>23</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

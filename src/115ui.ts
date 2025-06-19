@@ -15,7 +15,7 @@ const driver_map: string[] = [
 export async function oneLogin(c: Context) {
     const client_uid: string = <string>c.req.query('client_uid');
     const client_key: string = <string>c.req.query('client_key');
-    const driver_txt: string = <string>c.req.query('apps_types');
+    const driver_txt: string = <string>c.req.query('driver_txt');
     const server_use: string = <string>c.req.query('server_use');
     if (server_use == "false" && (!driver_txt || !client_uid || !client_key))
         return c.json({text: "参数缺少"}, 500);

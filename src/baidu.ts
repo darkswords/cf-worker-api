@@ -14,7 +14,7 @@ const driver_map: string[] = [
 export async function oneLogin(c: Context) {
     const client_key: string = <string>c.req.query('client_key');
     const secret_key: string = <string>c.req.query('secret_key');
-    const driver_txt: string = <string>c.req.query('apps_types');
+    const driver_txt: string = <string>c.req.query('driver_txt');
     const server_use: string = <string>c.req.query('server_use');
     const redirector: string = 'https://' + c.env.MAIN_URLS + '/baiduyun/callback'
     console.log(driver_txt, client_key, secret_key)

@@ -31,7 +31,7 @@ const driver_map: Record<string, string[]> = {
 export async function oneLogin(c: Context) {
     const client_uid: string = <string>c.req.query('client_uid');
     const client_key: string = <string>c.req.query('client_key');
-    const driver_txt: string = <string>c.req.query('apps_types');
+    const driver_txt: string = <string>c.req.query('driver_txt');
     const server_use: string = <string>c.req.query('server_use');
     if (server_use == "false")
         if (!driver_txt || !client_uid || !client_key)
@@ -107,7 +107,6 @@ export async function oneToken(c: Context) {
             local.deleteCookie(c, 'client_uid');
             local.deleteCookie(c, 'client_key');
         }
-        local.deleteCookie(c, 'apps_types');
         local.deleteCookie(c, 'driver_txt');
         local.deleteCookie(c, 'server_use');
         if (!response.ok)

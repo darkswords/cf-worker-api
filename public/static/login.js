@@ -2,20 +2,20 @@
 async function getLogin(refresh = false) {
     let server_use = document.getElementById("server_use").checked;
     let secret_key = document.getElementById("secret-key").value;
+    let client_uid = document.getElementById("client-id").value;
+    let client_key = document.getElementById("app-secret").value;
+    let driver_txt = document.getElementById("site-select").value;
     let refresh_ui = document.getElementById("refresh-token").value;
-    let apps_uuid = document.getElementById("client-id").value;
-    let apps_keys = document.getElementById("app-secret").value;
-    let apps_type = document.getElementById("site-select").value;
-    let apps_subs = apps_type.split("_")[0]
+    let driver_pre = driver_txt.split("_")[0]
     console.log(server_use);
     let check_flag = true;
     // 验证秘钥情况 ==================================================
     if (!server_use) {
-        if (apps_type !== "alicloud_oa" && apps_subs !== "baiduyun")
-            if (apps_uuid === "" || apps_keys === "")
+        if (driver_txt !== "alicloud_oa" && driver_pre !== "baiduyun")
+            if (client_uid === "" || client_key === "")
                 check_flag = false
-        if (apps_subs === "baiduyun")
-            if (secret_key === "" || apps_keys === "")
+        if (driver_pre === "baiduyun")
+            if (secret_key === "" || client_key === "")
                 check_flag = false
         if (!check_flag) {
             await Swal.fire({
@@ -29,7 +29,7 @@ async function getLogin(refresh = false) {
         }
     }
     // 阿里云盘扫码v2直接调用专用API，不需要构建传统的requests路径
-    if (apps_type === "alicloud_oa" && !refresh) {
+    if (driver_txt === "alicloud_oa" && !refresh) {
         await startAlicloud2Login();
         return;
     }
@@ -50,14 +50,14 @@ async function getLogin(refresh = false) {
     }
 
 
-    if (apps_type === "alicloud_oa") apps_subs = "alicloud2"
-    let post_urls = "/" + apps_subs + base_urls + apps_uuid
-        + "&client_key=" + apps_keys + "&driver_txt=" + apps_type
+    if (driver_txt === "alicloud_oa") driver_pre = "alicloud2"
+    let post_urls = "/" + driver_pre + base_urls + client_uid
+        + "&client_key=" + client_key + "&driver_txt=" + driver_txt
         + "&server_use=" + server_use
     if (refresh) {
         post_urls += "&refresh_ui=" + refresh_ui
     }
-    if (apps_subs === "baiduyun") post_urls += "&secret_key=" + secret_key
+    if (driver_pre === "baiduyun") post_urls += "&secret_key=" + secret_key
     try {
         const response = await fetch(post_urls, {
             method: 'GET', headers: {'Content-Type': 'application/json'}
@@ -88,14 +88,14 @@ async function getLogin(refresh = false) {
         }
         // 申请登录模式 ================================================================
         if (response.status === 200) {
-            if (apps_subs === "onedrive" || apps_subs === "115cloud"
-                || apps_subs === "googleui" || apps_subs === "yandexui"
-                || apps_type === "baiduyun_go"
+            if (driver_pre === "onedrive" || driver_pre === "115cloud"
+                || driver_pre === "googleui" || driver_pre === "yandexui"
+                || driver_txt === "baiduyun_go"
             ) {
                 window.location.href = response_data.text;
             }
             // 百度云OOB模式（手动回调） ===============================================
-            if (apps_type === "baiduyun_ob") {
+            if (driver_txt === "baiduyun_ob") {
                 window.open(response_data.text);
                 await Swal.fire({
                     title: '提示',
@@ -112,16 +112,16 @@ async function getLogin(refresh = false) {
                         console.log('授权码:', authCode);
                         window.location.href = "/baiduyun/callback" +
                             "?server_oob=true" + "&secret_key=" + secret_key +
-                            "&client_key=" + apps_keys + "&code=" + authCode;
+                            "&client_key=" + client_key + "&code=" + authCode;
                     }
                 });
             }
             // 123网盘直接获取 ===========================================================
-            if (apps_subs === "123cloud") {
+            if (driver_pre === "123cloud") {
                 document.getElementById("access-token").value = response_data.text;
                 return;
             }
-            if (apps_type === "alicloud_qr") {
+            if (driver_txt === "alicloud_qr") {
                 let sid = response_data.sid;
                 await Swal.fire({
                     position: 'top',
@@ -132,8 +132,8 @@ async function getLogin(refresh = false) {
                     showConfirmButton: true
                 });
                 post_urls = "/alicloud/callback" +
-                    "?client_id=" + apps_uuid +
-                    "&client_secret=" + apps_keys +
+                    "?client_id=" + client_uid +
+                    "&client_secret=" + client_key +
                     "&grant_type=" + "authorization_code" +
                     "&code=" + sid
                 let auth_post = await fetch(post_urls, {method: 'GET'});
@@ -141,8 +141,8 @@ async function getLogin(refresh = false) {
                 if (auth_post.status === 200) {
                     window.location.href = `/?access_token=${auth_data.access_token}`
                         + `&refresh_token=${auth_data.refresh_token}`
-                        + `&client_uid=${apps_uuid}`
-                        + `&client_key=${apps_keys}`;
+                        + `&client_uid=${client_uid}`
+                        + `&client_key=${client_key}`;
                 }
             }
 
